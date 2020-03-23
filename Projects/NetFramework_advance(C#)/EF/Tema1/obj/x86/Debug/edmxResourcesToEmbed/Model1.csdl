@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="EntitiesCustomer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CUSTOMERs" EntityType="TestModel.CUSTOMER" />
+    <EntitySet Name="ORDERs" EntityType="TestModel.ORDER" />
+    <EntitySet Name="ORDERDETAILS" EntityType="TestModel.ORDERDETAIL" />
+    <AssociationSet Name="FK_ORDER" Association="TestModel.FK_ORDER">
+      <End Role="CUSTOMER" EntitySet="CUSTOMERs" />
+      <End Role="ORDER" EntitySet="ORDERs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDERDETAILS" Association="TestModel.FK_ORDERDETAILS">
+      <End Role="ORDER" EntitySet="ORDERs" />
+      <End Role="ORDERDETAILS" EntitySet="ORDERDETAILS" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="CUSTOMERID" />
+    </Key>
+    <Property Name="CUSTOMERID" Type="Int16" Nullable="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="ADRESA" Type="String" MaxLength="30" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="ORDERs" Relationship="TestModel.FK_ORDER" FromRole="CUSTOMER" ToRole="ORDER" />
+  </EntityType>
+  <EntityType Name="ORDER">
+    <Key>
+      <PropertyRef Name="ORDERID" />
+    </Key>
+    <Property Name="ORDERID" Type="Int16" Nullable="false" />
+    <Property Name="DATA" Type="DateTime" Nullable="false" />
+    <Property Name="CUSTOMERID" Type="Int16" Nullable="false" />
+    <Property Name="VALOARE" Type="Decimal" Precision="12" Scale="2" />
+    <NavigationProperty Name="CUSTOMER" Relationship="TestModel.FK_ORDER" FromRole="ORDER" ToRole="CUSTOMER" />
+    <NavigationProperty Name="ORDERDETAILS" Relationship="TestModel.FK_ORDERDETAILS" FromRole="ORDER" ToRole="ORDERDETAILS" />
+  </EntityType>
+  <EntityType Name="ORDERDETAIL">
+    <Key>
+      <PropertyRef Name="ORDERID" />
+      <PropertyRef Name="SERIAL" />
+    </Key>
+    <Property Name="ORDERID" Type="Int16" Nullable="false" />
+    <Property Name="PRODUS" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="true" />
+    <Property Name="VALOARE" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="SERIAL" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="ORDER" Relationship="TestModel.FK_ORDERDETAILS" FromRole="ORDERDETAILS" ToRole="ORDER" />
+  </EntityType>
+  <Association Name="FK_ORDER">
+    <End Role="CUSTOMER" Type="TestModel.CUSTOMER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ORDER" Type="TestModel.ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="CUSTOMERID" />
+      </Principal>
+      <Dependent Role="ORDER">
+        <PropertyRef Name="CUSTOMERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDERDETAILS">
+    <End Role="ORDER" Type="TestModel.ORDER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ORDERDETAILS" Type="TestModel.ORDERDETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORDER">
+        <PropertyRef Name="ORDERID" />
+      </Principal>
+      <Dependent Role="ORDERDETAILS">
+        <PropertyRef Name="ORDERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

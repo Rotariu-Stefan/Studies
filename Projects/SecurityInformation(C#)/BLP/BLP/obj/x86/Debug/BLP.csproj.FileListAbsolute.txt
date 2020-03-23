@@ -1,0 +1,14 @@
+C:\Users\StravoS\Desktop\BLP\BLP\bin\Debug\BLP.exe
+C:\Users\StravoS\Desktop\BLP\BLP\bin\Debug\BLP.pdb
+C:\Users\StravoS\Desktop\BLP\BLP\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\StravoS\Desktop\BLP\BLP\obj\x86\Debug\BLP.exe
+C:\Users\StravoS\Desktop\BLP\BLP\obj\x86\Debug\BLP.pdb
+U:\stravos\SI\BLP\BLP\obj\x86\Debug\BLP.exe
+U:\stravos\SI\BLP\BLP\obj\x86\Debug\BLP.pdb
+U:\stravos\SI\BLP\BLP\bin\Debug\BLP.exe
+U:\stravos\SI\BLP\BLP\bin\Debug\BLP.pdb
+U:\stravos\SI\BLP\BLP\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\INFO\stravos\SI\BLP\BLP\obj\x86\Debug\BLP.exe
+D:\INFO\stravos\SI\BLP\BLP\obj\x86\Debug\BLP.pdb
+D:\INFO\stravos\SI\BLP\BLP\bin\Debug\BLP.exe
+D:\INFO\stravos\SI\BLP\BLP\bin\Debug\BLP.pdb

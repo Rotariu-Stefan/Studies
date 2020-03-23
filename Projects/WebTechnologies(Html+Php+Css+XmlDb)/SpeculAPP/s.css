@@ -1,0 +1,96 @@
+body 
+{
+	background:#E0ECF8;
+	background-image:url('http://students.info.uaic.ro/~stefan.rotariu/SpeculAPP/back.JPG');
+	background-position:top center;
+}
+a:link,a:hover
+{
+	color:#5858FA;
+}
+a:visited
+{
+	color:#8181F7;
+}
+div#menu
+{
+	background:#F5A9A9;
+	position:relative;
+	left:350px;
+	text-align:center;
+	border:1px solid black;
+	width:500px;
+}
+
+div#left
+{
+	background:#F5A9A9;
+	text-align:center;
+	letter-spacing:2px;
+
+	border:1px solid black;
+	position:fixed;
+	left:100px;
+	width:170px;
+	max-height:550px;
+}
+div#left a
+{
+	text-transform:uppercase;
+	text-decoration:underline;
+	font-size:120%;
+	font-weight:bolder;
+}
+div#right
+{
+	background:#F5A9A9;
+	text-transform:uppercase;
+	text-align:center;
+	letter-spacing:2px;
+	margin-bottom:50px;
+	border:1px solid black;
+	position:fixed;
+	left:950px;
+	width:170px;
+	max-height:500px;
+}
+
+p.window
+{
+	background:#F78181;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	position:relative;
+	left:430px;
+	margin-top:50px;
+	border:1px solid black;
+	max-width:360px;
+	max-height:500px;
+}
+
+div.comm
+{
+	background:#F78181;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	position:relative;
+	left:430px;
+	margin-top:50px;
+	border:1px solid black;
+	max-width:350px;
+	max-height:500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

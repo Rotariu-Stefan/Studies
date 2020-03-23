@@ -1,0 +1,5 @@
+C:\Users\StravoS\Desktop\xmltest\xmltest\bin\Debug\xmltest.exe
+C:\Users\StravoS\Desktop\xmltest\xmltest\bin\Debug\xmltest.pdb
+C:\Users\StravoS\Desktop\xmltest\xmltest\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\StravoS\Desktop\xmltest\xmltest\obj\x86\Debug\xmltest.exe
+C:\Users\StravoS\Desktop\xmltest\xmltest\obj\x86\Debug\xmltest.pdb

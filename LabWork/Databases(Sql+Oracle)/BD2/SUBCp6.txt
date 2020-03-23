@@ -1,0 +1,236 @@
+1)
+SELECT ename, sal
+FROM emp e
+WHERE 3>(SELECT COUNT(DISTINCT sal) 
+         FROM emp e1
+         WHERE e1.sal>=e.sal)
+ORDER BY sal desc;
+   
+2)
+SELECT ename
+FROM emp e
+WHERE NOT EXISTS(SELECT empno
+                FROM emp e1
+                WHERE e1.mgr=e.empno);
+
+
+
+3)
+SELECT ename,sal,deptno,(SELECT AVG(sal)
+                         FROM emp e1
+                         WHERE e.deptno=e1.deptno) as dept_avg
+FROM emp e
+WHERE sal>(SELECT AVG(sal)
+           FROM emp e2
+           WHERE e.deptno=e2.deptno);
+
+
+4)
+SELECT ename
+FROM emp e
+WHERE sal<(SELECT AVG (sal)/2
+             FROM emp e1
+             WHERE e.deptno=e1.deptno);
+
+5)
+SELECT ename
+FROM emp e
+WHERE EXISTS(SELECT ename 
+             FROM emp e1
+             WHERE e.deptno=e1.deptno AND e.sal<e1.sal AND e1.hiredate>e.hiredate)
+
+----------------------------------------------------------------
+
+1)
+SELECT p.codp
+FROM produse p
+WHERE 1<=(SELECT COUNT(DISTINCT v.codp)
+          FROM vanzari v, sectii s
+          WHERE s.etaj=1
+          AND s.cods=v.cods
+          AND p.codp=v.codp)
+      AND 1<=(SELECT COUNT(DISTINCT v.codp)
+              FROM vanzari v, sectii s
+              WHERE s.etaj<>1
+              AND v.cods=s.cods
+              AND p.codp=v.codp);
+
+2)
+SELECT p.codp
+FROM produse p
+WHERE 0=(SELECT COUNT(v.codp)
+          FROM vanzari v, sectii s
+          WHERE s.etaj=1
+          AND s.cods=v.cods
+          AND p.codp=v.codp);
+
+3)
+SELECT p.codp
+FROM produse p
+WHERE (SELECT COUNT(DISTINCT v.cods)
+          FROM vanzari v, sectii s
+          WHERE s.etaj=2
+          AND s.cods=v.cods
+          AND p.codp=v.codp)=(SELECT COUNT(s1.cods)
+                              FROM sectii s1
+                              WHERE s1.etaj=2);
+
+4)
+SELECT s.cods
+FROM sectii s
+WHERE (SELECT COUNT(p.codp)
+       FROM produse p
+       WHERE p.tip='A')<>(SELECT COUNT(DISTINCT v.codp)
+                          FROM vanzari v, produse p1
+                          WHERE v.cods=s.cods
+                          AND v.codp=p1.codp
+                          AND p1.tip='A');
+
+5)
+SELECT DISTINCT v.codp
+FROM vanzari v
+WHERE v.cods IN (SELECT f.cods
+                 FROM furnizeaza f
+                 GROUP BY f.cods
+                 HAVING COUNT(DISTINCT f.codf)=(SELECT COUNT(f1.codf)
+                                                FROM furnizori f1));
+
+6)
+SELECT DISTINCT v.codp
+FROM vanzari v
+WHERE v.cods IN (SELECT f.cods
+                 FROM furnizeaza f
+                 GROUP BY f.cods
+                 HAVING COUNT(DISTINCT f.codp)=(SELECT COUNT(DISTINCT v1.codp)
+                                                FROM vanzari v1
+                                                WHERE v1.cods=f.cods));
+
+7)
+SELECT DISTINCT v.codp
+FROM vanzari v
+WHERE v.cods IN (SELECT s.cods
+                 FROM sectii s
+                 where 2<=(SELECT COUNT(DISTINCT v1.codp)
+                                                FROM vanzari v1
+                                                WHERE v1.cods=s.cods));
+
+8)
+SELECT DISTINCT f.codp
+FROM furnizeaza f
+WHERE f.cods IN (SELECT s.cods
+                 FROM sectii s
+                 where 5000000<(SELECT SUM(v.cant*p.pret)
+                                FROM vanzari v, produse p
+                                WHERE v.cods=s.cods
+                                AND v.codp=p.codp));
+
+9)
+SELECT DISTINCT f.codp
+FROM furnizeaza f
+WHERE f.cods IN (SELECT s.cods
+                 FROM sectii s
+                 where (SELECT SUM(v.cant*p.pret)
+                        FROM vanzari v, produse p
+                        WHERE v.cods=s.cods
+                        AND v.codp=p.codp)*10>(SELECT SUM(v1.cant*p1.pret)
+                                               FROM vanzari v1, produse p1
+                                               WHERE v1.codp=p1.codp));
+
+10)
+SELECT DISTINCT v.codp
+FROM vanzari v, sectii s
+WHERE s.etaj=2
+AND v.cods=s.cods
+GROUP BY v.codp
+HAVING COUNT(DISTINCT v.cods)*2>(SELECT COUNT(s1.cods)
+                               FROM sectii s1
+                               WHERE s1.etaj=2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

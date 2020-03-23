@@ -1,0 +1,7 @@
+U:\stravos\DOTNET\Lab5\Lab5\obj\x86\Debug\ResolveAssemblyReference.cache
+U:\stravos\DOTNET\Lab5\Lab5\bin\Debug\Lab5.exe
+U:\stravos\DOTNET\Lab5\Lab5\bin\Debug\Lab5.pdb
+U:\stravos\DOTNET\Lab5\Lab5\obj\x86\Debug\Lab5.exe
+U:\stravos\DOTNET\Lab5\Lab5\obj\x86\Debug\Lab5.pdb
+D:\INFO\stravos\DOTNET\Lab5\Lab5\obj\x86\Debug\Lab5.exe
+D:\INFO\stravos\DOTNET\Lab5\Lab5\obj\x86\Debug\Lab5.pdb

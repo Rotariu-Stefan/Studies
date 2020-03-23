@@ -1,0 +1,8 @@
+select S.mat, S.nume
+from studenti S
+where not exists(select O.cod
+                 from obiecte O
+                 where O.an=S.an-1
+                 and (O.cod,S.mat) not in(select N.cod, N.mat
+                                          from note_studenti N
+                                          where N.nota>=5));

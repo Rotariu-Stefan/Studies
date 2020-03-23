@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<users>
+	<user uname="Haraldur">
+		<admin>0</admin>
+		<pass>hara123</pass>
+		<fname>Andrei</fname>
+		<lname>Hara</lname>
+		<email>haraldur@gmail.com</email>
+		<sex>m</sex>
+		<age>24</age>
+		<timeout>0</timeout>
+		<total>698</total>
+		<rank>Player</rank>
+		<uvalue name="RON">450.00</uvalue>
+		<uvalue name="USD">100.00</uvalue>
+		<uvalue name="EUR">16.59</uvalue>
+	<uvalue name="GBP">0.00</uvalue></user>
+	
+	<user uname="StravoS">
+		<admin>0</admin>
+		<pass>u11</pass>
+		<fname>Stefan</fname>
+		<lname>Rotariu</lname>
+		<email>stravos_11@yahoo.com</email>
+		<sex>m</sex>
+		<age>23</age>
+		<timeout>0</timeout>
+		<total>3190</total>
+		<rank>Champion </rank>
+		<uvalue name="RON">1697.16</uvalue>
+		<uvalue name="USD">319.16</uvalue>
+		<uvalue name="EUR">114.94</uvalue>
+	<uvalue name="GBP">20.41</uvalue></user>
+	
+	<user uname="Amaria">
+		<admin>0</admin>
+		<pass>pass2</pass>
+		<fname>Ana</fname>
+		<lname>Maria</lname>
+		<email>ana123@gmail.com</email>
+		<sex>f</sex>
+		<age>38</age>
+		<timeout>1306902817</timeout>
+		<total>998</total>
+		<rank>Player</rank>
+		<uvalue name="RON">992.00</uvalue>
+		<uvalue name="USD">3.29</uvalue>
+		<uvalue name="EUR">0.00</uvalue>
+	<uvalue name="GBP">0.00</uvalue></user>
+	
+	<user uname="Admin">
+		<admin>1</admin>
+		<pass>admin</pass>
+		<fname>Admin</fname>
+		<lname>Lead</lname>
+		<email>adm@gmail.com</email>
+		<sex>m</sex>
+		<age>111</age>
+		<timeout>0</timeout>
+		<total>0</total>
+		<rank/>
+		<uvalue name="RON">0.00</uvalue>
+		<uvalue name="USD">0.00</uvalue>
+		<uvalue name="EUR">0.00</uvalue>
+	<uvalue name="GBP">0.00</uvalue></user>
+	<user uname="qwer">
+		<admin>0</admin>
+		<pass>qwer</pass>
+		<fname>qwer</fname>
+		<lname>qwer</lname>
+		<email>qwer</email>
+		<sex>m</sex>
+		<age>11</age>
+		<timeout>0</timeout>
+		<total>896</total>
+		<rank>Player</rank>
+		<uvalue name="RON">500.00</uvalue>
+		<uvalue name="USD">0</uvalue>
+		<uvalue name="EUR">132.98</uvalue>
+	<uvalue name="GBP">0.00</uvalue></user>
+</users>

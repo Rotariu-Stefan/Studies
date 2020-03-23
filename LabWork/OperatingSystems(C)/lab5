@@ -1,0 +1,52 @@
+1)Scrie program C ce primeste numele unui fis shi afis nr de aparitii pt fiecare
+caracter ce apare in el
+
+#include <unistd.h>
+#include <stdio.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <sttlib.h>
+
+int main (int  argc, char * argv[])
+{
+    int file;
+    int nr[256];
+    unsigned char ch;
+    int i,r;
+    
+    if(argc == 1)
+    {
+	printf("arg insuf");
+	exit(1);
+    }
+    for(i = 0; i <= 255; i++)
+	nr[i] = 0;
+    file=open(argv[1], O_RDONLY);
+    if(file == -1)
+    {
+	perror("Eroare la deschidere");
+	exit(2);
+    }
+    while(1)
+    {
+	r = read(file, &ch, 1);
+	if(r == -1)
+	{
+	    perror("Eroare la citire");
+	    exit(3);
+	}
+	if(r == 0)
+	    break;
+	nr[ch]++;
+    }
+    if(close(file) == -1)
+    {
+	perror("Eroare la inchidere");
+	exit(4);
+    }
+    for(i = 0; i<=255; i++)
+	if(nr[i])
+	    printf(" %c cu codul $d apare de %d ori \n", i, i, nr[i]);
+    return 0;
+}
+

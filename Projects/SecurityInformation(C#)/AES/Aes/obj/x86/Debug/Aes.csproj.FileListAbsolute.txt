@@ -1,0 +1,14 @@
+C:\Users\StravoS\Desktop\Aes\Aes\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\StravoS\Desktop\Aes\Aes\bin\Debug\Aes.exe
+C:\Users\StravoS\Desktop\Aes\Aes\bin\Debug\Aes.pdb
+C:\Users\StravoS\Desktop\Aes\Aes\obj\x86\Debug\Aes.exe
+C:\Users\StravoS\Desktop\Aes\Aes\obj\x86\Debug\Aes.pdb
+U:\stravos\SI\aes\Aes\obj\x86\Debug\Aes.exe
+U:\stravos\SI\aes\Aes\obj\x86\Debug\Aes.pdb
+U:\stravos\SI\aes\Aes\bin\Debug\Aes.exe
+U:\stravos\SI\aes\Aes\bin\Debug\Aes.pdb
+U:\stravos\SI\aes\Aes\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\INFO\stravos\SI\aes\Aes\obj\x86\Debug\Aes.exe
+D:\INFO\stravos\SI\aes\Aes\obj\x86\Debug\Aes.pdb
+D:\INFO\stravos\SI\aes\Aes\bin\Debug\Aes.exe
+D:\INFO\stravos\SI\aes\Aes\bin\Debug\Aes.pdb

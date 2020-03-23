@@ -1,0 +1,12 @@
+U:\stravos\DOTNET\Lab2\Lab2\obj\x86\Debug\ResolveAssemblyReference.cache
+U:\stravos\DOTNET\Lab2\Lab2\bin\Debug\Lab2.exe
+U:\stravos\DOTNET\Lab2\Lab2\bin\Debug\Lab2.pdb
+U:\stravos\DOTNET\Lab2\Lab2\obj\x86\Debug\Lab2.exe
+U:\stravos\DOTNET\Lab2\Lab2\obj\x86\Debug\Lab2.pdb
+C:\Users\StravoS\Desktop\Lab2\Lab2\obj\x86\Debug\Lab2.exe
+C:\Users\StravoS\Desktop\Lab2\Lab2\obj\x86\Debug\Lab2.pdb
+C:\Users\StravoS\Desktop\Lab2\Lab2\bin\Debug\Lab2.exe
+C:\Users\StravoS\Desktop\Lab2\Lab2\bin\Debug\Lab2.pdb
+C:\Users\StravoS\Desktop\Lab2\Lab2\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\INFO\stravos\DOTNET\Lab2\Lab2\obj\x86\Debug\Lab2.exe
+D:\INFO\stravos\DOTNET\Lab2\Lab2\obj\x86\Debug\Lab2.pdb

@@ -1,0 +1,4 @@
+lex svlex.l
+yacc -d svyacc.y
+gcc y.tab.c lex.yy.c -o svprg
+./svprg

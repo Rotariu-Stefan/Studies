@@ -1,0 +1,53 @@
+1)Scrie script ce calc factorial recursiv:
+
+function factorial()
+{
+if [ $1 -le 1 ]
+then
+    return 1
+else
+    let n_1=$1-1
+    factorial $n_1
+    let rez=$1*$?
+    return rez
+fi
+}
+if [ $# -eq 0 ]
+then
+    echo -n "Dati n: "
+    read n
+else
+    n=$1
+fi
+
+factorial $n
+echo Factorial($n)=$?
+
+
+2)Scrie script ce calculeaza nr de fis normale si nr dir dintr-un dir, parcurgand
+ul recursiv.Se afis inf pentru fiecare subdir parcurs.Numele se transmite ca
+param sau cu read:
+
+if [ $# -eq 0 ]
+then
+    echo -n Dati numele directorului
+else
+    numedir=$1
+fi
+
+nr_fis=0
+nr_dir=0
+
+for f in `ls -A $numedir`
+do
+    cale=$numedir/$f
+    if [ -d $cale ] ; then
+	let nr_dir++
+	$0 $cale  		#apelul recursiv
+    elif [ -f $cale ] ; then
+	let nr_fis++
+    fi
+done
+echo "$numedir are $nr_dir directoare si #nr_fis fisiere"
+
+    

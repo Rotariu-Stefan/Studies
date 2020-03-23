@@ -1,0 +1,14 @@
+C:\Users\StravoS\Desktop\Jablon\Jablon\bin\Debug\Jablon.exe
+C:\Users\StravoS\Desktop\Jablon\Jablon\bin\Debug\Jablon.pdb
+C:\Users\StravoS\Desktop\Jablon\Jablon\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\StravoS\Desktop\Jablon\Jablon\obj\x86\Debug\Jablon.exe
+C:\Users\StravoS\Desktop\Jablon\Jablon\obj\x86\Debug\Jablon.pdb
+U:\stravos\SI\Jablon\Jablon\obj\x86\Debug\Jablon.exe
+U:\stravos\SI\Jablon\Jablon\obj\x86\Debug\Jablon.pdb
+U:\stravos\SI\Jablon\Jablon\bin\Debug\Jablon.exe
+U:\stravos\SI\Jablon\Jablon\bin\Debug\Jablon.pdb
+U:\stravos\SI\Jablon\Jablon\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\INFO\stravos\SI\Jablon\Jablon\obj\x86\Debug\Jablon.exe
+D:\INFO\stravos\SI\Jablon\Jablon\obj\x86\Debug\Jablon.pdb
+D:\INFO\stravos\SI\Jablon\Jablon\bin\Debug\Jablon.exe
+D:\INFO\stravos\SI\Jablon\Jablon\bin\Debug\Jablon.pdb

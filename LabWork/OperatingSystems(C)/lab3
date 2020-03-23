@@ -1,0 +1,100 @@
+1)Scrie script ce listeaza toti param din linia de comanda :
+
+#!/bin/bash
+i=0
+for par in $@
+do
+    let i=i+1
+    echo "param_$i" = "$par"
+done
+
+i=0
+while test $i -lt $#
+do
+    let i+=1
+    echo param_$i\ =\ ${!i}
+done
+
+2)Scrie script ce afis useri din an I care au pagini locale:
+
+lista=`grep info1 /etc/group | cut -d: -f4 | tr "," " "
+for user in $lista
+do
+    dir_html_user=/home/studs/2009/$user/html
+    if test -r $dir_home_user/index.html -o -r #dir_home_user/index.htm -o -r #dir_home_user/index.php
+    then
+	echo $user are pag la "(http://student.info.uaic.ro/~"$user")."
+    fi
+done
+
+3)Scrie script ce primeste ca param un dir si compileaza toate fis sursa C aflate
+in el:
+
+if [ $# -eq 0 ]
+then
+    echo "Eroare:param insuficientzi !!"
+    exit
+fi
+if [ ! -d $1 -o ! -r $1 ]
+then
+    echo "Eroare: $1 nu-i dir sau n-ai drept de citire a lui !!"
+    exit
+fi
+for sursa in $1/*c
+do
+    exe=`basename $sursa.c`
+    echo Compilam $sursa shi obt. executabilu $exe ...
+    gcc $sursa -o $exe
+done
+
+
+4)Scrie script ce pt. un user specificat prin UID sa afis numele lui real precum
+si denumirea tuturor grupurilor din care face parte:
+
+if [ $# -eq 0 ]
+then
+    echo "Param insuficientzi !!"
+    exit
+fi
+cuv=":$1:"
+linie=`grep $cuv /etc/passwd`
+if [ $? -eq 0 ]
+then
+    nume=`echo $linie | cut -d: -f5 | cut -d, -f1`
+    echo Numele real e $nume
+    
+    cont=`echo $linie | cut -d: -f1`
+    
+    gid=`echo $linie |cut -d: -f4`
+    grP=`grep :$grP: /etc/group | cut -d: -f1`
+    echo Grup principal: $grP
+    
+    grS=`grep -w $cont /etc/group | cut -d: -f1`
+    echo Grupuri secundare: $grS
+else
+    echo Nu exista userul !!
+fi
+
+
+5)Scrie script ce sa efectueze calculul produsului n * m prin adunari repetate
+
+prod=0
+for i in `seq 1 $m`
+do
+    let prod=prod+$n
+done
+echo Rezultatul : $n \* $m = $prod
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

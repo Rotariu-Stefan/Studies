@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<status>
+	<start>1000</start>
+	<wmark>3000</wmark>
+	<lmark>250</lmark>
+	<lref>1306849455</lref>
+	<value>
+		<name full="Romanian Leu Nou">RON</name>
+		<rmin>1.00</rmin>
+		<rmax>1.00</rmax>
+		<amin>1.00</amin>
+		<amax>1.00</amax>
+		<curr>1</curr>
+		<time>15</time>
+	</value>
+	
+	<value>
+		<name full="United States Dollar">USD</name>
+		<rmin>2.70</rmin>
+		<rmax>3.30</rmax>
+		<amin>2.00</amin>
+		<amax>4.00</amax>
+		<curr>3.12</curr>
+		<time>20</time>
+	</value>
+	
+	<value>
+		<name full="Euro">EUR</name>
+		<rmin>3.80</rmin>
+		<rmax>4.40</rmax>
+		<amin>3.00</amin>
+		<amax>5.00</amax>
+		<curr>4.35</curr>
+		<time>25</time>
+	</value>
+<value><name full="GBP">GBP</name><rmin>4.50</rmin><rmax>5.50</rmax><amin>4</amin><amax>6</amax><time>33</time><curr>4.88</curr></value></status>

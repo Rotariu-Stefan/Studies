@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<songs>
+  <song>
+    <name>Soldier Side
+    </name>
+    <album>Mesmerize
+    </album>
+    <artist>SOAD
+    </artist>
+    <time>0:3:33
+    </time>
+  </song>
+  <song>
+    <name>Apocalipse Please
+    </name>
+    <album>Apocalipse Please
+    </album>
+    <artist>Muse
+    </artist>
+    <time>0:3:47
+    </time>
+  </song>
+  <song>
+    <name>Bliss
+    </name>
+    <album>Citizen Zero
+    </album>
+    <artist>Muse
+    </artist>
+    <time>0:2:57
+    </time>
+  </song>
+</songs>

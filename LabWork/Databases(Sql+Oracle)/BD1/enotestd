@@ -1,0 +1,23 @@
+CREATE OR REPLACE
+FUNCTION ENOTESTD(smat NUMBER, ocod NUMBER) RETURN NUMBER IS
+  CURSOR ctest IS
+  select N.mat, N.cod
+  from note_studenti N
+  where nota>=5;
+  
+  vtest ctest%ROWTYPE;
+
+BEGIN
+   
+  OPEN ctest;
+  LOOP
+    FETCH ctest INTO vtest;
+    EXIT WHEN ctest%NOTFOUND;
+    IF smat=vtest.mat AND ocod=vtest.cod
+    THEN RETURN 1;
+    END IF;
+  END LOOP;
+  
+  
+  RETURN 0;
+END ENOTESTD;

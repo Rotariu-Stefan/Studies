@@ -1,0 +1,17 @@
+Sortare dupa zodii: 
+
+sagetator:
+	Stravos
+
+varsator:
+	Ana
+	Andrei
+
+pesti:
+	Maria
+
+gemeni:
+	Alex
+	Sandra
+
+

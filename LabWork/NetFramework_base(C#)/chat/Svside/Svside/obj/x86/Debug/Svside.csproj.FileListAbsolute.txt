@@ -1,0 +1,10 @@
+C:\Users\StravoS\Desktop\Svside\Svside\bin\Debug\Svside.exe
+C:\Users\StravoS\Desktop\Svside\Svside\bin\Debug\Svside.pdb
+C:\Users\StravoS\Desktop\Svside\Svside\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\StravoS\Desktop\Svside\Svside\obj\x86\Debug\Svside.exe
+C:\Users\StravoS\Desktop\Svside\Svside\obj\x86\Debug\Svside.pdb
+U:\stravos\DOTNET\chat\Svside\Svside\obj\x86\Debug\Svside.exe
+U:\stravos\DOTNET\chat\Svside\Svside\obj\x86\Debug\Svside.pdb
+U:\stravos\DOTNET\chat\Svside\Svside\bin\Debug\Svside.exe
+U:\stravos\DOTNET\chat\Svside\Svside\bin\Debug\Svside.pdb
+U:\stravos\DOTNET\chat\Svside\Svside\obj\x86\Debug\ResolveAssemblyReference.cache

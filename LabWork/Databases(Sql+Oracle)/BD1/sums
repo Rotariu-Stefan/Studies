@@ -1,0 +1,10 @@
+create or replace
+FUNCTION sums (ccod NUMBER, tcod NUMBER) RETURN NUMBER IS
+        v NUMBER;
+      BEGIN
+        select sum(I.suma) INTO v
+        from incasari I
+        where I.codt=tcod
+        and I.codc=ccod;
+        RETURN v;
+      END sums;

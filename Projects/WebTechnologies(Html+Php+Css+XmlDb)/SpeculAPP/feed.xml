@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<!--<!DOCTYPE rss SYSTEM "feed.dtd">-->
+<rss version="2.0"><!-- orderid="889923"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="feed.xsd">-->
+	<channel>
+		<title>SpeculAPP</title>
+		<description>Joc de curs valutar !</description>
+		<link>http://students.info.uaic.ro/~stefan.rotariu/SpeculAPP</link>
+		<item>
+			<title>SpeculAPP-Login</title>
+			<description>Login your account to play!</description>
+			<link>http://students.info.uaic.ro/~stefan.rotariu/SpeculAPP/Login.php</link>
+		</item>
+		<item>
+			<title>SpeculAPP-Register</title>
+			<description>Register to start!</description>
+			<link>http://students.info.uaic.ro/~stefan.rotariu/SpeculAPP/Register.php</link>
+		</item>
+		<item>
+			<title>SpeculAPP-Top Users</title>
+			<description>See who is on top!</description>
+			<link>http://students.info.uaic.ro/~stefan.rotariu/SpeculAPP/Top.php</link>
+		</item>		
+	</channel>
+</rss>

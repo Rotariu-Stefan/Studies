@@ -1,0 +1,38 @@
+1)Sa se scrie comanda care afiseaza numele de cont si UID-urile tuturor
+utilizatorilor sistemului
+
+cut -f1,3 -d: /etc/passwd
+
+sau
+
+cut --fields 1,3 --delimiter : /etc/passwd
+
+
+
+
+2)Sa se scrie comanda care selecteaza din fisierul /etc/passwd doar informatiile
+despre un utilizator specificat ca arg. al comenzii
+
+grep numeuser /etc/passwd
+
+
+
+
+3)Sa se scrie comenda care afiseaza numele shi GID-urile tutror grupurilor de
+utilizatori ai sistemului
+
+cut -f1,3 -d: /etc/group
+
+sau
+
+cut -f1,3 -d: --output-delimiter=" - " /etc/group
+
+
+
+4)Sa scrie comanda care afiseaza lista tuturor utilizatorilor care sun membrii
+ai grupului info1
+
+grep info1 /etc/group | cut -f4 -d: | tr , " "
+grep info1 /etc/group | cut -f4 -d: | tr , \\n
+
+

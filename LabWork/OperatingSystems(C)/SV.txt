@@ -1,0 +1,22 @@
+hi.c			<====================> 				ho.c
+
+mkfifo("hi2.ho",0666);
+								mkfifo("ho2.hi",0666);
+
+p1=open("hi2.ho",O_WRONLY);					p2=open("ho2.hi",O_RDONLY);
+p1=open("hi2.ho",O_RDONLY);					p2=open("ho2.hi",O_WRONLY);
+
+-afiseaza "hi-"							-citeste din hi2.ho
+-scrie in hi2.ho						-afish "ho"
+-citeste din ho2.hi						-scrie in ho2.hi
+
+-------------------------------------------------------------------------------------------
+
+pipe_ex1.c
+
+if(pipe(p1)==-1)		->		mkfifo("fifo",0666);
+
+tata
+	close(p[0])		->		p[1]=open("fifo",O_WRONLY);   fout=fopen("...","w")
+fiu
+	close(p[1])		->		p[0]=open("fifo",O_RDONLY);   fin=		"r"

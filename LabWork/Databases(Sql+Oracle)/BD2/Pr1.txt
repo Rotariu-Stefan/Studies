@@ -1,0 +1,102 @@
+1
+
+2)True
+
+3)True
+
+4)True
+
+5)virgula dupa ename,	x nu e operator,	trebuie ".." pentru a se scrie spatiul din ANNUAL SALLARY
+
+6)
+DESC dept;
+
+SELECT *
+FROM dept;
+
+7)
+DESC emp;
+
+SELECT empno,ename,job,hiredate
+FROM emp;
+
+s plq7.sql;
+
+8)
+r plq7.sql;
+
+9)
+SELECT DISTINCT job
+FROM emp;
+
+10)
+SELECT ename||','||job AS "Employee and Title"
+FROM emp;
+
+11)
+SELECT empno||','||TRIM(ename)||','||TRIM(job)||','||mgr||','||hiredate||','||sal||','||comm||','||deptno AS the_output
+FROM emp;
+
+--------------------------------------------------------------
+
+4)
+SELECT ename,job,hiredate
+FROM emp
+WHERE hiredate BETWEEN '20-FEB-1981' AND '1-MAY-1981';
+
+5)
+SELECT ename,deptno
+FROM emp
+WHERE deptno IN(10,30)
+ORDER BY ename;
+
+6)
+SELECT ename "Employee",sal "Monthly Sallary"
+FROM emp
+WHERE sal>1500 AND deptno IN(10,30);
+
+7)
+SELECT ename,hiredate
+FROM emp
+WHERE hiredate LIKE '%82';
+
+8)
+SELECT ename,job
+FROM emp
+WHERE mgr IS NULL;
+
+9)
+SELECT ename,sal,comm
+FROM emp
+WHERE NOT comm IS NULL
+ORDER BY sal,comm DESC;
+
+10)
+SELECT ename
+FROM emp
+WHERE ename LIKE '__A%';
+
+11)
+SELECT ename
+FROM emp
+WHERE ename LIKE '%L%L%' AND (deptno=30 OR mgr=7782);
+
+12)
+SELECT ename,job,sal
+FROM emp
+WHERE job IN('ANALYST','CLERK') AND NOT sal IN(1000,3000,5000);
+
+13)
+SELECT ename,sal,comm
+FROM emp
+WHERE NOT comm IS NULL AND (sal*11/10)<comm;
+
+
+
+
+
+
+
+
+
+

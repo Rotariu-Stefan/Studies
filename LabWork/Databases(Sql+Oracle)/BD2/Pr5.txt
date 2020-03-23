@@ -1,0 +1,99 @@
+1)
+TRUE
+
+2)
+FALSE -- Exceptie COUNT(*)
+
+3)
+TRUE
+
+4)
+SELECT round(max(sal)) "Maximum" ,round(min(sal)) "Minimum" ,round(sum(sal)) "Sum" ,round(avg(sal)) "Average"
+FROM emp;
+
+5)
+SELECT job,round(max(sal)) "Maximum" ,round(min(sal)) "Minimum" ,round(sum(sal)) "Sum" ,round(avg(sal)) "Average"
+FROM emp
+GROUP BY job;
+
+6)
+SELECT job,count(*)
+FROM emp
+GROUP BY job;
+
+7)
+SELECT count(DISTINCT e1.empno)
+FROM emp e, emp e1
+WHERE e.mgr=e1.empno;
+
+8)
+SELECT max(sal)-min(sal) difference
+FROM emp;
+
+9)
+SELECT mgr, min(sal)
+FROM emp
+WHERE NOT(mgr IS NULL)
+GROUP BY mgr
+HAVING min(sal)>1000;
+
+10)
+SELECT d.dname,d.loc,count(e.empno),avg(e.sal)
+FROM dept d, emp e
+WHERE d.deptno=e.deptno
+GROUP BY d.dname,d.loc;
+
+11)
+SELECT COUNT(*) total,
+       SUM(DECODE(TO_CHAR(hiredate, 'YY'),'80',1,0)) "1980",
+       SUM(DECODE(TO_CHAR(hiredate, 'YY'),'81',1,0)) "1981",
+       SUM(DECODE(TO_CHAR(hiredate, 'YY'),'82',1,0)) "1982",
+       SUM(DECODE(TO_CHAR(hiredate, 'YY'),'83',1,0)) "1983"
+FROM emp;
+
+12)
+SELECT e.job,
+      SUM(DISTINCT DECODE(e1.job,e.job,e1.sal,NULL)) "Dept 10",
+      SUM(DISTINCT DECODE(e2.job,e.job,e2.sal,NULL)) "Dept 20",
+      SUM(DISTINCT DECODE(e3.job,e.job,e3.sal,NULL)) "Dept 30",
+      SUM(DISTINCT e.sal) "Total"
+FROM emp e, emp e1, emp e2, emp e3
+WHERE e1.deptno=10 AND e2.deptno=20 AND e3.deptno=30
+GROUP BY e.job;
+
+SELECT job,
+	SUM(DISTINCT DECODE(deptno,10,sal,NULL)) "Dept 10",
+	SUM(DISTINCT DECODE(deptno,20,sal,NULL)) "Dept 20",
+	SUM(DISTINCT DECODE(deptno,30,sal,NULL)) "Dept 30",
+	SUM(DISTINCT sal) "Total"
+FROM emp
+GROUP BY job;
+
+------------------------------------------------------------------
+
+1)
+SELECT DISTINCT v.codp
+FROM vanzari v,sectii s
+WHERE v.cods=s.cods AND s.etaj=2
+GROUP BY v.codp
+HAVING count(DISTINCT s.cods)>1;
+
+2)
+SELECT s.cods, SUM(p.pret*v.cant)
+FROM sectii s,vanzari v, produse p
+WHERE s.cods=v.cods AND v.codp=p.codp
+GROUP BY s.cods;
+
+3)
+SELECT s.cods
+FROM sectii s,produse p,vanzari v
+WHERE s.cods=v.cods AND p.codp=v.codp AND p.cul='rosu'
+GROUP BY s.cods
+HAVING count(DISTINCT p.tip)>1;
+
+4)
+SELECT DISTINCT v.codp
+FROM vanzari v,sectii s
+WHERE v.cods=s.cods AND s.etaj=2 AND v.cant>9
+GROUP BY v.codp
+HAVING count(DISTINCT s.cods)>1;

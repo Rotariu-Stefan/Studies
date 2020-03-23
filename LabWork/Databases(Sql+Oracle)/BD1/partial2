@@ -1,0 +1,45 @@
+set serveroutput on;
+
+DECLARE
+
+  CURSOR obcurs (s_mat NUMBER, s_an NUMBER) IS
+    select O.cod
+    from obiecte O
+    where O.an=s_an-1
+    and not enotestd(s_mat, O.cod)=1;
+    
+  CURSOR std IS
+    select *
+    from studenti;
+  
+  vstd std%ROWTYPE;
+  vobcurs obcurs%ROWTYPE;
+  
+BEGIN
+
+  DBMS_OUTPUT.PUT_LINE('Studentii integralisti sunt:');
+  DBMS_OUTPUT.PUT_LINE('COD            NUME');
+  DBMS_OUTPUT.PUT_LINE('---------------------');
+  
+  OPEN std;
+  LOOP
+  
+    FETCH std INTO vstd;
+    EXIT WHEN std%NOTFOUND;
+    
+    OPEN obcurs(vstd.mat, vstd.an);
+    FETCH obcurs INTO vobcurs;
+    IF obcurs%NOTFOUND
+      THEN DBMS_OUTPUT.PUT_LINE(vstd.mat||'           '||vstd.nume);
+    END IF;
+    CLOSE obcurs;
+    
+  END LOOP;
+  
+END;
+    
+    
+    
+    
+    
+    

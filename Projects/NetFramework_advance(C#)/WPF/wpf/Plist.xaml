@@ -1,0 +1,30 @@
+﻿<Window x:Class="wpf.Plist"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Plist" Height="400" Width="347" Closing="Window_Closing" Background="DarkRed" FontWeight="Bold" BorderBrush="#FFD7B9B9">
+    
+    <Window.Resources>
+        <DataTemplate x:Key="contentTemplate">
+            <DockPanel>
+                <TextBlock Foreground="RoyalBlue" Text="{Binding Path=name}"/>
+                <TextBlock Text="{Binding XPath=artist}" />
+                <TextBlock Foreground="Silver" Text="{Binding XPath=time}" />
+            </DockPanel>
+        </DataTemplate>
+    </Window.Resources>
+    
+    <StackPanel Name="plistPanel">
+
+        <Label Content="Song list:" Name="llistname" HorizontalAlignment="Center" Foreground="LightGray" FontSize="14"/>
+        <ListBox Name="plist" Height="300" ItemsSource="{Binding}" MouseDoubleClick="plist_MouseDoubleClick" Background="#d08070" Foreground="#FF433838">
+        </ListBox>
+        
+        <StackPanel Name="controlPanel" Orientation="Horizontal" Height="36">
+            <Button Content="Load" Name="bload" Height="20" Width="50" VerticalAlignment="Center" Margin="5" Click="bload_Click" />
+            <Button Content="Add" Name="badd" Height="20" Width="50" VerticalAlignment="Center" Margin="5" Click="badd_Click" />
+            <Button Content="Remove" Name="bremove" Height="20" Width="50" VerticalAlignment="Center" Margin="5" Click="bremove_Click" IsEnabled="False"/>
+            <CheckBox Content="Repeat" Name="crepeat" VerticalAlignment="Center" Margin="10" Foreground="LightGray"/>
+            <CheckBox Content="Shuffle" Name="cshuffle" VerticalAlignment="Center" Margin="10" Foreground="LightGray"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

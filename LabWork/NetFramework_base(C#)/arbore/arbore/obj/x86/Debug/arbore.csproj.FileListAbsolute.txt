@@ -1,0 +1,14 @@
+C:\Users\StravoS\Desktop\arbore\arbore\bin\Debug\arbore.exe
+C:\Users\StravoS\Desktop\arbore\arbore\bin\Debug\arbore.pdb
+C:\Users\StravoS\Desktop\arbore\arbore\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\StravoS\Desktop\arbore\arbore\obj\x86\Debug\arbore.exe
+C:\Users\StravoS\Desktop\arbore\arbore\obj\x86\Debug\arbore.pdb
+U:\stravos\DOTNET\arbore\arbore\obj\x86\Debug\arbore.exe
+U:\stravos\DOTNET\arbore\arbore\obj\x86\Debug\arbore.pdb
+U:\stravos\DOTNET\arbore\arbore\bin\Debug\arbore.exe
+U:\stravos\DOTNET\arbore\arbore\bin\Debug\arbore.pdb
+U:\stravos\DOTNET\arbore\arbore\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\INFO\stravos\DOTNET\arbore\arbore\obj\x86\Debug\arbore.exe
+D:\INFO\stravos\DOTNET\arbore\arbore\obj\x86\Debug\arbore.pdb
+D:\INFO\stravos\DOTNET\arbore\arbore\bin\Debug\arbore.exe
+D:\INFO\stravos\DOTNET\arbore\arbore\bin\Debug\arbore.pdb

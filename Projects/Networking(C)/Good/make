@@ -1,0 +1,5 @@
+gcc -o serverfork.exe $(mysql_config --cflags) serverfork.c $(mysql_config --libs);
+echo "SERVER BUILT!";
+gcc Client.c -o client.exe;
+echo "CLIENT BUILT!";
+echo "USAGE: ./client.exe 127.0.0.1 <port>";

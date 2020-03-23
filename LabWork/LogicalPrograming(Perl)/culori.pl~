@@ -1,0 +1,25 @@
+rece(X):-
+	X=verde(Y),
+	verde(Y);
+	X=albastru(Y),
+	albastru(Y).
+
+
+albastru(cer).
+albastru(mare).
+
+verde(frunza).
+verde(iarba).
+
+cald(X):-
+	X=rosu(Y),
+	rosu(Y);
+	X=galben(Y),
+	galben(Y).
+
+rosu(rosie).
+rosu(mac).
+
+galben(soare).
+galben(pai).
+

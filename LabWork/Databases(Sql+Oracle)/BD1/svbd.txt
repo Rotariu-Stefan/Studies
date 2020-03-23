@@ -1,0 +1,167 @@
+DROP TABLE GAMES
+/
+CREATE TABLE GAMES
+	(GID NUMBER(3) PRIMARY KEY,
+	GNAME CHAR(15) ,
+	TYPE CHAR(10) ,
+	RELEASE DATE ,
+	MULTI CHAR(3),
+	COST NUMBER(5,2),
+	PID NUMBER(3) )
+/
+DROP TABLE PROD
+/
+CREATE TABLE PROD			--n to 1
+	(PID NUMBER(3) PRIMARY KEY,
+	PNAME CHAR(15) ,
+	CEO CHAR(15) ,
+	WORTH NUMBER(10))
+/
+DROP TABLE USR
+/
+CREATE TABLE USR
+	(USID NUMBER(3) PRIMARY KEY,
+	UNAME CHAR(15) ,
+	ADR CHAR(15))
+/
+DROP TABLE SALES
+/
+CREATE TABLE SALES			--n to n
+	(GID NUMBER(3) ,
+	USID NUMBER(3) ,
+	CANT NUMBER(2) )
+/
+INSERT INTO GAMES VALUES
+	(1,'WorldofWarcraft','Mmorpg',TO_DATE('5/8/2005', 'dd/mm/yyyy'),'yes',90,1)
+/
+INSERT INTO GAMES VALUES
+	(2,'Diablo2','Rpg',TO_DATE('13/4/2001', 'dd/mm/yyyy'),'yes',34,1)
+/
+INSERT INTO GAMES VALUES
+	(3,'Sacrifice','Action/RTS',TO_DATE('11/11/2000', 'dd/mm/yyyy'),'no',11,3)
+/
+INSERT INTO GAMES VALUES
+	(4,'Dune2','RTS',TO_DATE('1/12/1996', 'dd/mm/yyyy'),'no',15,2)
+/
+INSERT INTO GAMES VALUES
+	(5,'RedAlert','RTS',TO_DATE('27/10/2001', 'dd/mm/yyyy'),'yes',22,2)
+/
+INSERT INTO GAMES VALUES
+	(6,'Mario','Action',TO_DATE('20/6/1984', 'dd/mm/yyyy'),'no',2,6)
+/
+INSERT INTO GAMES VALUES
+	(7,'Travian','Web-Based',TO_DATE('17/12/2006', 'dd/mm/yyyy'),'yes',0,7)
+/
+INSERT INTO GAMES VALUES
+	(8,'Balls','Logical',TO_DATE('30/1/1998', 'dd/mm/yyyy'),'no',0,4)
+/
+INSERT INTO GAMES VALUES
+	(9,'Fifa2000','Sports',TO_DATE('14/7/2000', 'dd/mm/yyyy'),'yes',44,5)
+/
+INSERT INTO GAMES VALUES
+	(10,'Heroes1','TBS',TO_DATE('24/11/1991', 'dd/mm/yyyy'),'yes',31,8)
+/
+INSERT INTO GAMES VALUES
+	(11,'Heroes4','TBS',TO_DATE('7/8/2004', 'dd/mm/yyyy'),'yes',36,8)
+/
+
+
+
+INSERT INTO PROD VALUES
+	(1,'Blizzard','Davidson',34000)
+/
+INSERT INTO PROD VALUES
+	(2,'Westwood','Rothwood',12000)
+/
+INSERT INTO PROD VALUES
+	(3,'Coolsoft','Tarlan',4500)
+/
+INSERT INTO PROD VALUES
+	(4,'Mirror','Hensen',550)
+/
+INSERT INTO PROD VALUES
+	(5,'Ubisoft','Willford',27000)
+/
+INSERT INTO PROD VALUES
+	(6,'Toon','Tensen',6000)
+/
+INSERT INTO PROD VALUES
+	(7,'Armedia','Marcol',700)
+/
+INSERT INTO PROD VALUES
+	(8,'Wonderworks','Warner',31500)
+/
+
+
+
+INSERT INTO USR VALUES
+	(1,'Mark','Dublin')
+/
+INSERT INTO USR VALUES
+	(2,'John','Vegas')
+/
+INSERT INTO USR VALUES
+	(3,'Andrei','Suceava')
+/
+INSERT INTO USR VALUES
+	(4,'Paul','Bacau')	
+/
+INSERT INTO USR VALUES
+	(5,'Stefan','Iasi')
+/
+INSERT INTO USR VALUES
+	(6,'Mircea','Iasi')
+/
+INSERT INTO USR VALUES
+	(7,'Andrei','Botosani')
+/
+INSERT INTO USR VALUES
+	(8,'Maria','Galati')
+/
+INSERT INTO USR VALUES
+	(9,'Sandra','Sibiu')
+/
+INSERT INTO USR VALUES
+	(10,'Alex','Bucuresti')
+/
+
+
+
+INSERT INTO SALES VALUES
+	(1,2,1)
+/
+INSERT INTO SALES VALUES
+	(4,1,2)
+/
+INSERT INTO SALES VALUES
+	(1,5,2)
+/
+INSERT INTO SALES VALUES
+	(11,3,3)
+/
+INSERT INTO SALES VALUES
+	(5,7,1)
+/
+INSERT INTO SALES VALUES
+	(7,7,1)
+/
+INSERT INTO SALES VALUES
+	(3,9,1)
+/
+INSERT INTO SALES VALUES
+	(2,10,5)
+/
+INSERT INTO SALES VALUES
+	(6,4,2)
+/
+INSERT INTO SALES VALUES
+	(8,4,1)
+/
+INSERT INTO SALES VALUES
+	(1,10,4)
+/
+INSERT INTO SALES VALUES
+	(5,5,2)
+/
+
+

@@ -1,0 +1,56 @@
+1)
+SELECT sysdate "Date"
+FROM sys.dual;
+
+2)
+SELECT empno, ename, sal, sal*15/100 "New Salary"
+FROM emp;
+
+3)-^
+
+4)
+SELECT empno, ename, sal, sal*115/100 "New Salary", sal*15/100 "Increase"
+FROM emp;
+
+5)
+SELECT ename, hiredate, TO_CHAR(NEXT_DAY(ADD_MONTHS(hiredate,6),1), 'DAY ",the" ddspth "of" MONTH "," YYYY')
+FROM emp;
+
+6)
+SELECT ename, ROUND(MONTHS_BETWEEN(sysdate, hiredate)) months_worked
+FROM emp;
+
+7)
+SELECT ename||' earns '||sal||' monthly but wants '||3*sal "Dream Salaries"
+FROM emp;
+
+8)
+SELECT ename, LPAD(sal,15,'*') salary
+FROM emp;
+
+9)
+SELECT INITCAP(ename), LENGTH(ename)
+FROM emp
+WHERE SUBSTR(ename,1,1) IN('J','M','A');
+
+10)
+SELECT ename, hiredate, TO_CHAR(hiredate, 'DAY')
+FROM emp
+ORDER by TO_CHAR(hiredate, 'D');
+
+11)
+SELECT ename, DECODE(comm, NULL, 'No commision', comm)
+FROM emp;
+
+
+
+
+
+
+
+
+
+
+
+
+

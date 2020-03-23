@@ -1,0 +1,19 @@
+CREATE OR REPLACE FUNCTION EINCASARI(ccod NUMBER, tcod NUMBER) RETURN NUMBER IS
+  CURSOR ctest IS
+  select I1.codc, I1.codt from incasari I1;
+  vtest ctest%ROWTYPE;
+
+BEGIN
+   
+  OPEN ctest;
+  LOOP
+    FETCH ctest INTO vtest;
+    EXIT WHEN ctest%NOTFOUND;
+    IF ccod=vtest.codc AND tcod=vtest.codt
+    THEN RETURN 1;
+    END IF;
+  END LOOP;
+  
+  
+  RETURN 0;
+END EINCASARI;

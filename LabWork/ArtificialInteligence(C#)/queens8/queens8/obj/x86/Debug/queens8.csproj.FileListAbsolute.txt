@@ -1,0 +1,10 @@
+C:\Users\StravoS\Desktop\queens8\queens8\bin\Debug\queens8.exe
+C:\Users\StravoS\Desktop\queens8\queens8\bin\Debug\queens8.pdb
+C:\Users\StravoS\Desktop\queens8\queens8\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\StravoS\Desktop\queens8\queens8\obj\x86\Debug\queens8.exe
+C:\Users\StravoS\Desktop\queens8\queens8\obj\x86\Debug\queens8.pdb
+U:\stravos\IA2\queens8\queens8\obj\x86\Debug\queens8.exe
+U:\stravos\IA2\queens8\queens8\obj\x86\Debug\queens8.pdb
+U:\stravos\IA2\queens8\queens8\bin\Debug\queens8.exe
+U:\stravos\IA2\queens8\queens8\bin\Debug\queens8.pdb
+U:\stravos\IA2\queens8\queens8\obj\x86\Debug\ResolveAssemblyReference.cache

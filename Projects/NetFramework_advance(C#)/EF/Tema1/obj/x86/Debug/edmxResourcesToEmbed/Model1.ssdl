@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TestModelStoreContainer">
+    <EntitySet Name="CUSTOMER" EntityType="TestModel.Store.CUSTOMER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ORDER" EntityType="TestModel.Store.ORDER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ORDERDETAILS" EntityType="TestModel.Store.ORDERDETAILS" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ORDER" Association="TestModel.Store.FK_ORDER">
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+      <End Role="ORDER" EntitySet="ORDER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDERDETAILS" Association="TestModel.Store.FK_ORDERDETAILS">
+      <End Role="ORDER" EntitySet="ORDER" />
+      <End Role="ORDERDETAILS" EntitySet="ORDERDETAILS" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="CUSTOMERID" />
+    </Key>
+    <Property Name="CUSTOMERID" Type="smallint" Nullable="false" />
+    <Property Name="NAME" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="ADRESA" Type="char" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="ORDER">
+    <Key>
+      <PropertyRef Name="ORDERID" />
+    </Key>
+    <Property Name="ORDERID" Type="smallint" Nullable="false" />
+    <Property Name="DATA" Type="date" Nullable="false" />
+    <Property Name="CUSTOMERID" Type="smallint" Nullable="false" />
+    <Property Name="VALOARE" Type="decimal" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="ORDERDETAILS">
+    <Key>
+      <PropertyRef Name="ORDERID" />
+      <PropertyRef Name="SERIAL" />
+    </Key>
+    <Property Name="ORDERID" Type="smallint" Nullable="false" />
+    <Property Name="PRODUS" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="VALOARE" Type="decimal" Nullable="false" Precision="12" Scale="2" />
+    <Property Name="SERIAL" Type="smallint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ORDER">
+    <End Role="CUSTOMER" Type="TestModel.Store.CUSTOMER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ORDER" Type="TestModel.Store.ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="CUSTOMERID" />
+      </Principal>
+      <Dependent Role="ORDER">
+        <PropertyRef Name="CUSTOMERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDERDETAILS">
+    <End Role="ORDER" Type="TestModel.Store.ORDER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ORDERDETAILS" Type="TestModel.Store.ORDERDETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORDER">
+        <PropertyRef Name="ORDERID" />
+      </Principal>
+      <Dependent Role="ORDERDETAILS">
+        <PropertyRef Name="ORDERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

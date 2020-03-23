@@ -1,0 +1,31 @@
+﻿<Window x:Class="wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="154" Width="473" Closing="Window_Closing" FontWeight="Bold" Background="DarkRed">
+    <StackPanel Name="mainPanel" Height="103" Width="411">
+        
+        <StackPanel Name="playPanel" Height="60" Width="416">
+            <StackPanel Name="playnamePanel" Orientation="Horizontal" HorizontalAlignment="Left">
+                <Label Content="00:00" Name="ltime" VerticalAlignment="Center" FontSize="18" Foreground="LightGray"/>
+                <Label Content="Song playing..." Name="lsong" Width="270" VerticalAlignment="Center" Margin="10" FontSize="15" Foreground="LightGray"/>
+                <Button Content="PL" Name="blist" Height="20" Width="50" Click="blist_Click" />
+            </StackPanel>
+            
+            <Slider Name="playbar" Minimum="0" Maximum="100" LargeChange="15" SmallChange="1" />
+        </StackPanel>
+
+        <StackPanel Name="bPanel" Height="50" Orientation="Horizontal" HorizontalAlignment="Center" Width="416">
+            <Button Content="Back" Name="bback" Height="20" Width="50" VerticalAlignment="Center" Margin="5" IsEnabled="False" Click="bback_Click" />
+            <Button Content="Play" Name="bplay" Height="20" Width="50" VerticalAlignment="Center" Margin="5" Click="bplay_Click" IsEnabled="False"/>
+            <Button Content="Pause" Name="bpause" Height="20" Width="50" VerticalAlignment="Center" Margin="5" IsEnabled="False" Click="bpause_Click" />
+            <Button Content="Stop" Name="bstop" Height="20" Width="50" VerticalAlignment="Center" Margin="5" IsEnabled="False" Click="bstop_Click" />
+            <Button Content="Forward" Name="bforward" Height="20" Width="55" VerticalAlignment="Center" Margin="5" IsEnabled="False"/>
+            
+            <StackPanel Name="volPanel" Margin="10,0,0,0">
+                <Label Content="    Volume" Name="lvolume" FontSize="10" Foreground="LightGray"/>
+                <Slider Name="volume" Width="98" Minimum="0" Maximum="100" Value="70" Height="23" />
+            </StackPanel>
+        </StackPanel>
+
+    </StackPanel>
+</Window>

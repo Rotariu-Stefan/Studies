@@ -1,0 +1,158 @@
+----------------------- Page 1-----------------------
+
+  
+
+Laborator 4.  
+
+Creare coada dubla   
+
+Enunt problema: Implementare coada dubla  
+
+Aveti nevoie de un obiect de tip coada pentru care sa puteti controla in mod explicit  
+adaugarea si stergerea (eliminarea) obiectelor fie prin partea de inceput a cozii fie prin  
+partea finala a cozii. Deci e o coada dubla.  
+
+Indicatie. Aveti tipul descris mai jos. Va trebui sa il includeti in proiect si sa-l dezvoltati  
+complet.  
+
+Construiti urmatoarul tip si implementati metodele ce nu au asociat cod.  
+Veti scrie de asemenea codul ce va testa functionalitatea tipului construit.  
+  
+using System;  
+using System.Collections;  
+using System.Collections.Generic;  
+  
+ [Serializable]  
+public class DblQueue<T> : ICollection<T>, ICloneable  
+{  
+  
+// coada dubla este simulata prin List<T>  
+          protected List<T> internalList = null;  
+  
+    public DblQueue()  
+    {  
+    }  
+  
+    public DblQueue(ICollection<T> coll)  
+    {  
+    }  
+  
+  
+// numar elemente din coada (tip Read)  
+    public virtual int Count  
+    {  
+    }  
+  
+    public virtual bool IsSynchronized  
+    {  
+        get {return (false);}  
+    }  
+  
+    public virtual object SyncRoot  
+    {  
+        get {return (this);}  
+    }  
+
+----------------------- Page 2-----------------------
+
+      
+// golirea cozii  
+          public virtual void Clear()  
+    {  
+    }  
+  
+// Crearea unei noi cozi duble  
+          public object Clone()  
+    {  
+    }  
+  
+// Coada contine obj?  
+    public virtual bool Contains(T obj)  
+    {  
+    }  
+  
+// copiere coada in Array incepand cu index  
+    public virtual void CopyTo(Array array, int index)  
+    {  
+    }  
+  
+// scoaterea unui obiect din coada folosind LIFO  
+    public virtual T DequeueHead()  
+    {  
+    }  
+  
+// scoaterea unui obiect din coada folosind FIFO  
+    public virtual T DequeueTail()  
+    {  
+    }  
+  
+// Introducerea unui obiect in coada la inceputul cozii  
+    public virtual void EnqueueHead(T obj)  
+    {  
+    }  
+  
+// Introducerea unui obiect in coada la sfarsitul cozii  
+  
+    public virtual void EnqueueTail(T obj)  
+    {  
+    }  
+  
+// verificarea primului element din coada (metoda Peek)  
+    public virtual T PeekHead()  
+    {  
+    }  
+  
+// verificarea ultimului element din coada (metoda Peek)  
+    public virtual T PeekTail()  
+    {  
+    }  
+  
+// enumerator   
+    public virtual IEnumerator GetEnumerator()  
+    {  
+    }  
+  
+
+----------------------- Page 3-----------------------
+
+// coada transformata intr-un array  
+    public virtual T[] ToArray()  
+    {  
+    }  
+  
+  
+// eliminare spatiu in exces din coada   
+   public virtual void TrimExcess()  
+    {  
+    }  
+  
+    void System.Collections.Generic.ICollection<T>.Add(T item)  
+    {  
+        throw (new NotSupportedException(  
+               "Use the EnqueueHead or EnqueueTail methods."));  
+    }  
+  
+// Copiere in array a cozii incepand cu index  
+    void System.Collections.Generic.ICollection<T>.CopyTo(T[] item, int  
+index)  
+    {  
+    }  
+  
+    bool System.Collections.Generic.ICollection<T>.Remove(T item)  
+    {  
+        throw (new NotSupportedException(  
+               "Use the DequeueHead or DequeueTail methods."));  
+    }  
+  
+    bool System.Collections.Generic.ICollection<T>.IsReadOnly  
+    {  
+        get {throw (new NotSupportedException("Not Supported."));}  
+    }  
+  
+// enumerator   
+    IEnumerator<T>  
+System.Collections.Generic.IEnumerable<T>.GetEnumerator()  
+    {  
+    }  
+}  
+  

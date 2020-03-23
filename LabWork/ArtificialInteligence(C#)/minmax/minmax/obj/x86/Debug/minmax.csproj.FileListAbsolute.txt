@@ -1,0 +1,9 @@
+C:\Users\Chrys\AppData\Local\Temporary Projects\minmax\bin\Debug\minmax.exe
+C:\Users\Chrys\AppData\Local\Temporary Projects\minmax\bin\Debug\minmax.pdb
+C:\Users\Chrys\AppData\Local\Temporary Projects\minmax\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Chrys\AppData\Local\Temporary Projects\minmax\obj\x86\Debug\minmax.exe
+C:\Users\Chrys\AppData\Local\Temporary Projects\minmax\obj\x86\Debug\minmax.pdb
+C:\Users\Chrys\Desktop\minmax\minmax\obj\x86\Debug\minmax.exe
+C:\Users\Chrys\Desktop\minmax\minmax\obj\x86\Debug\minmax.pdb
+U:\stravos\IA2\minmax\minmax\obj\x86\Debug\minmax.exe
+U:\stravos\IA2\minmax\minmax\obj\x86\Debug\minmax.pdb

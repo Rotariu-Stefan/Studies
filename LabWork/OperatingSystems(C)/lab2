@@ -1,0 +1,47 @@
+1)Scrie com care sa parcurga recursiv dir dat ca arg si sa afiseze permisiunile 
+tuturor fisierelor si subdir intalnite.
+
+find $1 -printf %M\ :\ %p\\n
+
+2)Scrie com ce sterge toate fis temporare din contul propriu(se termina in .bak
+sau in ~)
+
+find ~ -name "*bak" -delete -o -name "*~" -delete
+
+3)Scrie com ce sorteaza descrescator liniile de text din fisierul /etc/passwd
+iar rezultatul sortarii sa fie salvat in fis ouput.txt
+
+sort -r /etc/passwd > ouput.txt
+
+4)Scrie com ce sorteaza screscator dupa UID liniile de test din fis /etc/passwd
+
+sort /etc/passwd -t: -k3 -n
+
+---------------------------------------------------------------------------
+
+1)Scrie com ce calculeaza cate conturi de useri exista in sistem.
+
+->doar cei ce au /bin/bash ca shell de login:
+
+grep bin/bash /etc/passwd | wc -l
+grep -c bin/bash /etc/passwd
+
+->doar conturile ce sunt asociate la programe de sistem:
+
+grep -c -v bin/bash /etc/passwd
+
+
+2)Scrie com ce afis nr. total al userilor membrii ai grupului info1
+->si din ceilalri ani de studiu:
+
+grep info1 /etc/group | cut -f4 -d: | tr , " " | wc -w
+
+3)Scrie com ce afis(unic) toate shellurile folosite de userii sistemului:
+
+cut -f7 -d: /etc/passwd | sort -u
+
+4)Scrie com ce scrie, in fis useri-logati.txt username tuturor userilor prezenti
+in sistem la momentul executiei comenzii in ordine alfabetica shi unica:
+
+who | cut -f1 -d" " | sort -u
+finger | grep -v Login | cut -f1 -d" " | sort -u

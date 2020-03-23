@@ -1,0 +1,10 @@
+U:\stravos\CalculN\T1\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+U:\stravos\CalculN\T1\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+U:\stravos\CalculN\T1\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+U:\stravos\CalculN\T1\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+U:\stravos\CalculN\T1\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
+C:\Users\StravoS\Desktop\T1\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+C:\Users\StravoS\Desktop\T1\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
+C:\Users\StravoS\Desktop\T1\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\StravoS\Desktop\T1\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\StravoS\Desktop\T1\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache

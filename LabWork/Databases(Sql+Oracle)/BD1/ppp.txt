@@ -1,0 +1,11 @@
+     select C.cod, C.nume
+      from contribuabili C
+      where not exists(select T.cod
+                       from taxe T
+                       where T.categoria=C.categoria
+                       and not T.suma<=(select sum(I.suma)
+                                    from incasari I
+                                    where I.codt=T.cod
+                                    and I.codc=C.cod)
+                       and (C.cod,T.cod) in(select I1.codc,I1.codt
+                                            from incasari I1));
